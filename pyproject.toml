@@ -178,9 +178,6 @@ exclude = [
     '^build_helpers\.py$',
     '^ft_client/build/.*$',
 ]
-plugins = [
-  "sqlalchemy.ext.mypy.plugin"
-]
 
 [[tool.mypy.overrides]]
 module = "tests.*"
@@ -232,8 +229,7 @@ exclude-newer = "1 week"
 
 [tool.uv.exclude-newer-package]
 ccxt = false
-ruff = "5 days"
-cryptography = "5 days"
+virtualenv = "5 days"
 
 [tool.ruff]
 line-length = 100
@@ -338,5 +334,5 @@ exclude = [
 ]
 
 [tool.codespell]
-ignore-words-list = "coo,fo,strat,zar,selectin"
+ignore-words-list = "coo,fo,strat,zar,selectin,dependant"
 skip="*.svg,./user_data,freqtrade/rpc/api_server/ui/installed,freqtrade/exchange/*.json"
